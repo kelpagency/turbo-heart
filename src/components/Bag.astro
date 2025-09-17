@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+
+import bagImage from "../assets/Malaphortune-Bag-Mockup-Iso.png";
+import background from "../assets/bg-white.png";
+---
+
+<section class="bag">
+	<img class="bag-bg" src={background.src} alt="" loading="lazy" />
+	<div class="wrapper">
+		<div class="bag-text">
+			<h2>100+ IDIOM MASHUPS 100% TASTY SNACKABLE NONSENSE</h2>
+			<p>
+				Inside each cookie is a twisted take on traditional fortune — not quite
+				right, but somehow exactly what you needed. These malaphors (idiom
+				mashups) are part word salad, part life advice. Perfect for gift-givers,
+				language lovers, and people who live life one mixed metaphor at a time.
+			</p>
+			<p><a href="#" class="button">Available Soon</a></p>
+		</div>
+		<div class="bag-image">
+			<Image
+				src={bagImage}
+				alt="Malaphortune Bag of cookies"
+				width={812}
+				height={1052}
+				decoding="async"
+				loading="lazy"
+				layout="constrained"
+			/>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	.bag {
+		padding: 3rem 0 2rem;
+		overflow: hidden;
+		position: relative;
+		&-bg {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.wrapper {
+			display: flex;
+			gap: 0 2rem;
+			flex-wrap: wrap;
+			position: relative;
+		}
+		&-text {
+			flex: 1 1 520px;
+			margin-top: 4rem;
+			margin-bottom: 3rem;
+		}
+		&-image {
+			flex: 1 1 520px;
+			margin-bottom: -8rem;
+		}
+	}
+</style>

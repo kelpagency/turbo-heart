@@ -1,0 +1,160 @@
+---
+import cookie_frame_1 from "../assets/Cookie-1.png";
+import cookie_frame_2 from "../assets/Cookie-2.png";
+import cookie_frame_3 from "../assets/Cookie-3.png";
+
+import BgTexture from "../assets/bg-lines.svg";
+---
+
+<section class="cookie">
+	<div class="wrapper">
+		<h1>
+			Botched wisdom. <br />
+			Deliciously delivered.
+		</h1>
+		<img
+			id="cookieImage"
+			src={cookie_frame_1.src}
+			alt="Fortune Cookie"
+			loading="lazy"
+			data-frame2={cookie_frame_2.src}
+			data-frame3={cookie_frame_3.src}
+		/>
+	</div>
+	<BgTexture class="cookie-bg cookie-bg--tr" />
+	<BgTexture class="cookie-bg cookie-bg--tl" />
+	<BgTexture class="cookie-bg cookie-bg--br" />
+	<BgTexture class="cookie-bg cookie-bg--bl" />
+</section>
+
+<style lang="scss">
+	.cookie {
+		background: var(--orange);
+		color: white;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 90vh;
+		padding: 2rem 0;
+		position: relative;
+		overflow: hidden;
+		@media (max-width: 767px) {
+			min-height: 100vh;
+		}
+		.wrapper {
+			position: relative;
+			z-index: 1;
+		}
+		h1 {
+			margin-bottom: 2rem;
+		}
+		#cookieImage {
+			@media (max-width: 767px) {
+				width: 100%;
+				height: 250px;
+				object-fit: contain;
+			}
+		}
+		&-bg {
+			position: absolute;
+			@media (max-width: 1100px) {
+				width: 116px;
+				height: auto;
+			}
+			@media (max-width: 600px) {
+				width: 80px;
+			}
+			&--tr {
+				top: 0;
+				right: 0;
+				transform: rotate(90deg);
+			}
+			&--tl {
+				top: 0;
+				left: 0;
+			}
+			&--br {
+				bottom: 0;
+				right: 0;
+				transform: rotate(-180deg);
+			}
+			&--bl {
+				bottom: 0;
+				left: 0;
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	@keyframes shake {
+		0% {
+			transform: rotate(0deg);
+		}
+		10% {
+			transform: rotate(4deg);
+		}
+		20% {
+			transform: rotate(-4deg);
+		}
+		30% {
+			transform: rotate(4deg);
+		}
+		40% {
+			transform: rotate(-4deg);
+		}
+		50% {
+			transform: rotate(4deg);
+		}
+		60% {
+			transform: rotate(-4deg);
+		}
+		70% {
+			transform: rotate(2deg);
+		}
+		80% {
+			transform: rotate(-2deg);
+		}
+		90% {
+			transform: rotate(1deg);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+
+	#cookieImage.shake {
+		animation: shake 0.8s ease-in-out;
+	}
+</style>
+
+<script>
+	const cookieImage = document.getElementById("cookieImage");
+
+	const frame2 = cookieImage.dataset.frame2;
+	const frame3 = cookieImage.dataset.frame3;
+
+	let hasAnimated = false;
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting && !hasAnimated) {
+					hasAnimated = true;
+					cookieImage.classList.add("shake");
+
+					setTimeout(() => {
+						cookieImage.src = frame2;
+					}, 900);
+
+					setTimeout(() => {
+						cookieImage.src = frame3;
+						cookieImage.classList.remove("shake");
+					}, 1200);
+				}
+			});
+		},
+		{ threshold: 0.8 },
+	);
+
+	observer.observe(document.querySelector(".cookie"));
+</script>
