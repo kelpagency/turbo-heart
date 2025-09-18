@@ -1,40 +1,47 @@
 ---
-import cookie_frame_1 from "../assets/Cookie-1.png";
-import cookie_frame_2 from "../assets/Cookie-2.png";
-import cookie_frame_3 from "../assets/Cookie-3.png";
+import logo1 from "../assets/logo-1.png";
+import logo2 from "../assets/logo-2.png";
+import logo3 from "../assets/logo-3.png";
+import logo4 from "../assets/logo-4.png";
+import logo5 from "../assets/logo-5.png";
+import mockup_alt from "../assets/mockup-alt.png";
 
-import BgTexture from "../assets/bg-lines.svg";
+
 ---
 
 <section class="cookie">
 	<div class="wrapper">
-		<h1>
-			Botched wisdom. <br />
-			Deliciously delivered.
-		</h1>
-		<img
-			id="cookieImage"
-			src={cookie_frame_1.src}
-			alt="Fortune Cookie"
-			loading="lazy"
-			data-frame2={cookie_frame_2.src}
-			data-frame3={cookie_frame_3.src}
-		/>
+	<img src={logo1.src} alt="GNC"/>
+	<img src={logo2.src} alt="Walmart"/>
+	<img src={logo3.src} alt="CVS"/>
+	<img src={logo4.src} alt="Walgreens"/>
+	<img src={logo5.src} alt="Vitamin Shoppe"/>
 	</div>
-	<BgTexture class="cookie-bg cookie-bg--tr" />
-	<BgTexture class="cookie-bg cookie-bg--tl" />
-	<BgTexture class="cookie-bg cookie-bg--br" />
-	<BgTexture class="cookie-bg cookie-bg--bl" />
+	<h3>AVAILABLE SOON AT YOUR FAVORITE SUPPLEMENTAL HEALTH RETAILERS</h3>
+	<hr class="divider" />
+	<div class="media-text">
+		<div class="media-img">
+			<img class="mockup-alt" src={mockup_alt.src} alt="Turbo Heart Bottle"/>
+		</div>
+		<div class="media-content">
+			<h2>BIOVAILABLE COQ10 WHERE IT MATTERS MOST: YOUR MITOCHONRIA</h2>
+			<p>Turbo Heart delivers a bioavailable form of CoQ10—ubiquinol—designed for maximum absorption where your body needs it most: the mitochondria. With daily use, it supports sustained cellular energy production and healthy heart function. No fluff. Just the science-backed boost your ticker deserves.</p>
+			<ul>
+				<li>Supports heart health and circulation</li>
+				<li>Enhances mitochondrial energy</li>
+				<li>Powered by clinically studied ingredients</li>
+				<li>No artificial fillers, dyes, or gimmicks</li>
+			</ul>
+		</div>
+	</div>
 </section>
 
 <style lang="scss">
 	.cookie {
-		background: var(--orange);
+		margin-top: -8rem;
+		background: #1c1c1c;
 		color: white;
 		text-align: center;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		min-height: 90vh;
 		padding: 2rem 0;
 		position: relative;
@@ -43,18 +50,55 @@ import BgTexture from "../assets/bg-lines.svg";
 			min-height: 100vh;
 		}
 		.wrapper {
+			margin-top: 8rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			position: relative;
 			z-index: 1;
+			img {
+				max-width: 150px;
+			}
+			gap: 2rem;
+			flex-wrap: wrap;
+		}
+		.media-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			max-width: 1200px;
+			text-align: left;
+			margin: auto;
+			gap: 4rem;
+			padding: 2em;
+			.media-img {
+				max-width: 100%;
+				  width: 600px;
+				  height: auto;
+			}
+			.media-content {
+				max-width: 800px;
+			}
+			@media (max-width: 767px) {
+				h2 {
+					font-size: 2rem;
+				}
+				padding: 0;
+				flex-wrap: wrap;
+				.media-content {
+					max-width: 80%;
+				}
+			}
+		}
+		.divider {
+			border: none;
+			  border-top: 2px solid #c11d1f;
+			  margin: 8rem auto;
+			  width: 80%;
 		}
 		h1 {
 			margin-bottom: 2rem;
-		}
-		#cookieImage {
-			@media (max-width: 767px) {
-				width: 100%;
-				height: 250px;
-				object-fit: contain;
-			}
 		}
 		&-bg {
 			position: absolute;
