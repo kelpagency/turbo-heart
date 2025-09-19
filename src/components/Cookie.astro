@@ -5,200 +5,137 @@ import logo3 from "../assets/logo-3.png";
 import logo4 from "../assets/logo-4.png";
 import logo5 from "../assets/logo-5.png";
 import mockup_alt from "../assets/mockup-alt.png";
-
-
 ---
 
 <section class="cookie">
-	<div class="wrapper">
-	<img src={logo1.src} alt="GNC"/>
-	<img src={logo2.src} alt="Walmart"/>
-	<img src={logo3.src} alt="CVS"/>
-	<img src={logo4.src} alt="Walgreens"/>
-	<img src={logo5.src} alt="Vitamin Shoppe"/>
-	</div>
-	<h3>AVAILABLE SOON AT YOUR FAVORITE SUPPLEMENTAL HEALTH RETAILERS</h3>
-	<hr class="divider" />
-	<div class="media-text">
-		<div class="media-img">
-			<img class="mockup-alt" src={mockup_alt.src} alt="Turbo Heart Bottle"/>
-		</div>
-		<div class="media-content">
-			<h2>BIOVAILABLE COQ10 WHERE IT MATTERS MOST: YOUR MITOCHONRIA</h2>
-			<p>Turbo Heart delivers a bioavailable form of CoQ10—ubiquinol—designed for maximum absorption where your body needs it most: the mitochondria. With daily use, it supports sustained cellular energy production and healthy heart function. No fluff. Just the science-backed boost your ticker deserves.</p>
-			<ul>
-				<li>Supports heart health and circulation</li>
-				<li>Enhances mitochondrial energy</li>
-				<li>Powered by clinically studied ingredients</li>
-				<li>No artificial fillers, dyes, or gimmicks</li>
-			</ul>
-		</div>
-	</div>
+  <div class="wrapper">
+    <img src={logo1.src} alt="GNC" />
+    <img src={logo2.src} alt="Walmart" />
+    <img src={logo3.src} alt="CVS" />
+    <img src={logo4.src} alt="Walgreens" />
+    <img src={logo5.src} alt="Vitamin Shoppe" />
+  </div>
+  <h3>AVAILABLE SOON AT YOUR FAVORITE SUPPLEMENTAL HEALTH RETAILERS</h3>
+  <hr class="divider" />
+  <div class="media-text">
+    <div class="media-img">
+      <img class="mockup-alt" src={mockup_alt.src} alt="Turbo Heart Bottle" />
+    </div>
+    <div class="media-content">
+      <h2>BIOVAILABLE COQ10 WHERE IT MATTERS MOST: YOUR MITOCHONRIA</h2>
+      <p>
+        Turbo Heart delivers a bioavailable form of CoQ10—ubiquinol—designed for
+        maximum absorption where your body needs it most: the mitochondria. With
+        daily use, it supports sustained cellular energy production and healthy
+        heart function. No fluff. Just the science-backed boost your ticker
+        deserves.
+      </p>
+      <ul>
+        <li>Supports heart health and circulation</li>
+        <li>Enhances mitochondrial energy</li>
+        <li>Powered by clinically studied ingredients</li>
+        <li>No artificial fillers, dyes, or gimmicks</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <style lang="scss">
-	.cookie {
-		margin-top: -8rem;
-		background: #1c1c1c;
-		color: white;
-		text-align: center;
-		min-height: 90vh;
-		padding: 2rem 0;
-		position: relative;
-		overflow: hidden;
-		@media (max-width: 767px) {
-			min-height: 100vh;
-		}
-		.wrapper {
-			margin-top: 8rem;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-			z-index: 1;
-			img {
-				max-width: 150px;
-			}
-			gap: 2rem;
-			flex-wrap: wrap;
-		}
-		.media-text {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-			max-width: 1200px;
-			text-align: left;
-			margin: auto;
-			gap: 4rem;
-			padding: 2em;
-			.media-img {
-				max-width: 100%;
-				  width: 600px;
-				  height: auto;
-			}
-			.media-content {
-				max-width: 800px;
-			}
-			@media (max-width: 767px) {
-				h2 {
-					font-size: 2rem;
-				}
-				padding: 0;
-				flex-wrap: wrap;
-				.media-content {
-					max-width: 80%;
-				}
-			}
-		}
-		.divider {
-			border: none;
-			  border-top: 2px solid #c11d1f;
-			  margin: 8rem auto;
-			  width: 80%;
-		}
-		h1 {
-			margin-bottom: 2rem;
-		}
-		&-bg {
-			position: absolute;
-			@media (max-width: 1100px) {
-				width: 116px;
-				height: auto;
-			}
-			@media (max-width: 600px) {
-				width: 80px;
-			}
-			&--tr {
-				top: 0;
-				right: 0;
-				transform: rotate(90deg);
-			}
-			&--tl {
-				top: 0;
-				left: 0;
-			}
-			&--br {
-				bottom: 0;
-				right: 0;
-				transform: rotate(-180deg);
-			}
-			&--bl {
-				bottom: 0;
-				left: 0;
-				transform: rotate(-90deg);
-			}
-		}
-	}
-	@keyframes shake {
-		0% {
-			transform: rotate(0deg);
-		}
-		10% {
-			transform: rotate(4deg);
-		}
-		20% {
-			transform: rotate(-4deg);
-		}
-		30% {
-			transform: rotate(4deg);
-		}
-		40% {
-			transform: rotate(-4deg);
-		}
-		50% {
-			transform: rotate(4deg);
-		}
-		60% {
-			transform: rotate(-4deg);
-		}
-		70% {
-			transform: rotate(2deg);
-		}
-		80% {
-			transform: rotate(-2deg);
-		}
-		90% {
-			transform: rotate(1deg);
-		}
-		100% {
-			transform: rotate(0deg);
-		}
-	}
-
-	#cookieImage.shake {
-		animation: shake 0.8s ease-in-out;
-	}
+  .cookie {
+    margin-top: 0;
+    background: #1c1c1c;
+    color: white;
+    text-align: center;
+    min-height: 90vh;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 767px) {
+      min-height: 100vh;
+      h3 {
+        max-width: 70%;
+        margin: auto;
+      }
+    }
+    .wrapper {
+      margin-top: 8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      img {
+        max-width: 150px;
+      }
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .media-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      max-width: 1200px;
+      text-align: left;
+      margin: auto;
+      gap: 4rem;
+      padding: 2em;
+      .media-img {
+        max-width: 100%;
+        width: 600px;
+        height: auto;
+      }
+      .media-content {
+        max-width: 800px;
+      }
+      @media (max-width: 767px) {
+        h2 {
+          font-size: 2rem;
+        }
+        padding: 0;
+        flex-wrap: wrap;
+        .media-content {
+          max-width: 80%;
+        }
+      }
+    }
+    .divider {
+      border: none;
+      border-top: 2px solid #c11d1f;
+      margin: 8rem auto;
+      width: 80%;
+    }
+    h1 {
+      margin-bottom: 2rem;
+    }
+    &-bg {
+      position: absolute;
+      @media (max-width: 1100px) {
+        width: 116px;
+        height: auto;
+      }
+      @media (max-width: 600px) {
+        width: 80px;
+      }
+      &--tr {
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+      }
+      &--tl {
+        top: 0;
+        left: 0;
+      }
+      &--br {
+        bottom: 0;
+        right: 0;
+        transform: rotate(-180deg);
+      }
+      &--bl {
+        bottom: 0;
+        left: 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
 </style>
-
-<script>
-	const cookieImage = document.getElementById("cookieImage");
-
-	const frame2 = cookieImage.dataset.frame2;
-	const frame3 = cookieImage.dataset.frame3;
-
-	let hasAnimated = false;
-
-	const observer = new IntersectionObserver(
-		(entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting && !hasAnimated) {
-					hasAnimated = true;
-					cookieImage.classList.add("shake");
-
-					setTimeout(() => {
-						cookieImage.src = frame2;
-					}, 900);
-
-					setTimeout(() => {
-						cookieImage.src = frame3;
-						cookieImage.classList.remove("shake");
-					}, 1200);
-				}
-			});
-		},
-		{ threshold: 0.8 },
-	);
-
-	observer.observe(document.querySelector(".cookie"));
-</script>
