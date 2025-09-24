@@ -17,9 +17,9 @@ import "sanitize.css/assets.css";
 		<title>Turbo Heart</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-		  href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,900;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-		  rel="stylesheet"
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,900;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
 		/>
 	</head>
 	<body>
@@ -27,7 +27,9 @@ import "sanitize.css/assets.css";
 	</body>
 </html>
 
-<style is:global>
+<style is:global lang="scss">
+	@use "@waaark/luge/dist/css/luge.css";
+
 	:root {
 		--orange: #fb5020;
 	}
@@ -100,3 +102,10 @@ import "sanitize.css/assets.css";
 		}
 	}
 </style>
+
+<script>
+	import luge from "@waaark/luge";
+	luge.settings({
+		credits: false,
+	});
+</script>
