@@ -7,123 +7,119 @@ import mockup from "../assets/turbo-heart-mockup.png";
 <section class="img-bar"></section>
 
 <div class="hero-wrapper">
-  <section class="hero">
-    <div class="hero-content">
-      <img
-        class="hero-logo"
-        src={Logo.src}
-        width="300"
-        height="697"
-        alt="Turbo Heart"
-        loading="eager"
-      />
-      <h1>NEXT-GEN UBIQUINOL FOR CARDIOVASULAR PERFORMANCE.</h1>
-      <p>
-        Powered by ubiquinol, the active form of CoQ10, to support heart health
-        and mitochondrial energy at the cellular level.
-      </p>
-    </div>
-    <div class="hero-image">
-      <img class="mockup" src={mockup.src} alt="Turbo Heart Bottle" />
-    </div>
-  </section>
+	<section class="hero">
+		<div class="hero-content">
+			<img
+				class="hero-logo"
+				src={Logo.src}
+				width="300"
+				height="697"
+				alt="Turbo Heart"
+				loading="eager"
+			/>
+			<h1>NEXT-GEN UBIQUINOL FOR CARDIOVASULAR PERFORMANCE.</h1>
+			<p>
+				Powered by ubiquinol, the active form of CoQ10, to support heart health
+				and mitochondrial energy at the cellular level.
+			</p>
+		</div>
+		<div class="hero-image">
+			<img class="mockup" src={mockup.src} alt="Turbo Heart Bottle" />
+		</div>
+	</section>
 </div>
 
 <style lang="scss">
-  .hero-image {
-    max-width: 100%;
-    width: 1100px;
-    height: auto;
-    z-index: 1;
-  }
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
+	.hero-wrapper {
+		background: #c11d1f;
+	}
+	.hero {
+		margin: auto;
+		max-width: 1200px;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: flex-end;
+		gap: 6rem;
+		justify-content: center;
+		padding: 2rem;
+		&-bg {
+			position: absolute;
+			inset: 0;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+		&-logo {
+			position: relative;
+			margin-bottom: 1.5rem;
+			padding: 1.5rem;
+			background: #1c1c1c;
+		}
+		&-content {
+			margin: auto;
+			p {
+				position: relative;
+				color: white;
+			}
+			h1 {
+				color: white;
+			}
+		}
+	}
+	.hero-image {
+		max-width: 100%;
+		width: 1100px;
+		height: auto;
+		margin-bottom: -10rem;
+	}
+	@media (max-width: 768px) {
+		.hero {
+			flex-direction: column;
+			text-align: center;
+			gap: 2rem;
+			flex-wrap: wrap;
+		}
 
-    .hero-content {
-      max-width: 100%;
-      padding: 0 1rem;
-    }
+		.hero-content {
+			max-width: 100%;
+			padding: 0 1rem;
+		}
 
-    .hero-image {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
-    }
+		.hero-image {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			margin-top: 1rem;
+		}
 
-    .hero-image img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    }
+		.hero-image img {
+			width: 100%;
+			max-width: 400px;
+			height: auto;
+		}
 
-    .hero-logo {
-      margin: 0 auto 1rem auto;
-      width: 500px;
-    }
+		.hero-logo {
+			margin: 0 auto 1rem auto;
+			width: 500px;
+		}
 
-    .hero h1 {
-      font-size: 2.5rem;
-      line-height: 1.2;
-      text-align: left;
-    }
+		.hero h1 {
+			font-size: 2.5rem;
+			line-height: 1.2;
+			text-align: left;
+		}
 
-    .hero p {
-      font-size: 1rem;
-      line-height: 1.5;
-      text-align: left;
-      max-width: 380px;
-    }
-  }
-  .hero-wrapper {
-    background: #c11d1f;
-    margin-bottom: -10em;
-    @media (max-width: 768px) {
-      margin-bottom: 0;
-    }
-    margin-top: -1px;
-  }
-  .hero {
-    margin: auto;
-    max-width: 1200px;
-    position: relative;
-    overflow: hidden;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6rem;
-    justify-content: center;
-    padding: 2rem;
-    &-bg {
-      position: absolute;
-      inset: 0;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-    &-logo {
-      position: relative;
-      margin-bottom: 1.5rem;
-      padding: 1.5rem;
-      background: #1c1c1c;
-    }
-    p {
-      position: relative;
-      color: white;
-    }
-    h1 {
-      color: white;
-    }
-  }
-  .img-bar {
-    background: #c11d1f url("../assets/heart-bg.png") repeat-x top center;
-    width: 100%;
-    height: clamp(80px, 12vw, 120px);
-  }
+		.hero p {
+			font-size: 1rem;
+			line-height: 1.5;
+			text-align: left;
+			max-width: 380px;
+		}
+	}
+	.img-bar {
+		background: #c11d1f url("../assets/heart-bg.png") repeat-x top center;
+		width: 100%;
+		height: clamp(80px, 12vw, 120px);
+	}
 </style>
