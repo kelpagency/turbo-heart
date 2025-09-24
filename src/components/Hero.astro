@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 import Logo from "../assets/logo-white.svg";
 import background from "../assets/heart-bg.png";
 import mockup from "../assets/turbo-heart-mockup.png";
@@ -24,7 +26,15 @@ import mockup from "../assets/turbo-heart-mockup.png";
 			</p>
 		</div>
 		<div class="hero-image">
-			<img class="mockup" src={mockup.src} alt="Turbo Heart Bottle" />
+			<Image
+				class="mockup"
+				src={mockup}
+				alt="Turbo Heart Black Bottle"
+				width={448}
+				height={790}
+				layout="constrained"
+				loading="eager"
+			/>
 		</div>
 	</section>
 </div>
