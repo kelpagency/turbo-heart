@@ -1,19 +1,17 @@
-<section class="bag">
+<section class="quote">
 	<div class="wrapper">
-		<div class="bag-text">
-			<h3>
-				“AFTER JUST TWO WEEKS ON TURBO HEART, I FEEL NOTICEABLY MORE
-				ENERGIZED—WITHOUT THE JITTERY SIDE EFFECTS OF CAFFEINE. KNOWING IT’S
-				SUPPORTING MY HEART AT A CELLULAR LEVEL? THAT’S PEACE OF MIND IN A
-				CAPSULE.”
-			</h3>
-			<h3 class="small-text">DARREN T., 42, CYCLIST & FATHER OF THREE</h3>
-		</div>
+		<blockquote class="quote-text">
+			“AFTER JUST TWO WEEKS ON TURBO HEART, I FEEL NOTICEABLY MORE
+			ENERGIZED—WITHOUT THE JITTERY SIDE EFFECTS OF CAFFEINE. KNOWING IT’S
+			SUPPORTING MY HEART AT A CELLULAR LEVEL? THAT’S PEACE OF MIND IN A
+			CAPSULE.”
+			<cite class="small-text">DARREN T., 42, CYCLIST & FATHER OF THREE</cite>
+		</blockquote>
 	</div>
 </section>
 
 <style lang="scss">
-	.bag {
+	.quote {
 		color: white;
 		background: #c11d1f;
 		padding: 3rem 0 2rem;
@@ -32,17 +30,27 @@
 			position: relative;
 			max-width: 1200px;
 			margin: auto;
-			h3 {
-				font-size: 24px;
-			}
 			.small-text {
 				font-size: 19px;
+				display: block;
+				margin-top: 2rem;
+				font-family: Barlow;
+				font-weight: 500;
+				font-size: 22px;
+				line-height: 61px;
+				text-align: center;
 			}
 		}
 		&-text {
 			flex: 1 1 520px;
 			margin-top: 4rem;
 			margin-bottom: 3rem;
+			font-size: 32px;
+			line-height: 1.9;
+			@media (max-width: 767px) {
+				font-size: 24px;
+				line-height: 1.5;
+			}
 		}
 	}
 </style>

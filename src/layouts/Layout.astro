@@ -18,7 +18,7 @@ import "sanitize.css/assets.css";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,900;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,900;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
@@ -32,6 +32,9 @@ import "sanitize.css/assets.css";
 
 	:root {
 		--orange: #fb5020;
+	}
+	html {
+		scroll-behavior: smooth;
 	}
 	html,
 	body {
@@ -75,30 +78,31 @@ import "sanitize.css/assets.css";
 			font-size: 48px;
 		}
 	}
-	h3 {
+	h3,
+	blockquote {
 		font-family: "Barlow", sans-serif;
 		font-size: 18px;
-		font-weight: 400;
+		font-weight: 500;
 		font-style: italic;
 		@media (max-width: 767px) {
 			font-size: 18px;
 		}
 	}
 	.button {
-		background: #fb5020;
-		color: white;
-		font-family: "Puritan", sans-serif;
+		background: white;
+		color: black;
+		font: inherit;
 		font-weight: 700;
 		font-style: normal;
 		display: inline-flex;
 		padding: 0.325rem 2rem;
-		border-radius: 4rem;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: 350ms ease;
+		margin: 1rem 0;
 		&:hover {
-			background: #ffc136;
-			color: black;
+			background: black;
+			color: white;
 		}
 	}
 </style>
