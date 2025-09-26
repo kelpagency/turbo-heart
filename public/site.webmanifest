@@ -1,6 +1,6 @@
 {
-  "name": "Malaphortune Cookies",
-  "short_name": "Malaphortune",
+  "name": "Turbo Heart",
+  "short_name": "TurboHeart",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#FB5020",
-  "background_color": "#FB5020",
+  "theme_color": "#c11d1f",
+  "background_color": "#1C1C1C",
   "display": "standalone"
 }
